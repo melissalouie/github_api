@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="page-header">
+    <h1>Welcome</h1>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Repositories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @repos.each do |repo| %>
+        <tr>
+          <td><%= repo.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
