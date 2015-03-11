@@ -1,0 +1,45 @@
+<div class="container">
+  <%= link_to 'Back', root_path, class: 'pull-right' %>
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td><%= @info.name %></td>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td><%= @info.location %></td>
+      </tr>
+      <tr>
+        <td>Created At</td>
+        <td><%= @info.created_at %></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><%= @info.email %></td>
+      </tr>
+      <tr>
+        <td>Company</td>
+        <td><%= @info.company %></td>
+      </tr>
+      <tr>
+        <td>Avatar</td>
+        <td><%= image_tag @info.avatar_url, size: '100' %></td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th><%= @info.name %>'s Repositories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @repos.each do |repo| %>
+        <tr>
+          <td><%= repo.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

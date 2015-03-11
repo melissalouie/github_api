@@ -9,4 +9,12 @@ class GithubFetcher
     @client.user.rels[:repos].get.data
   end
 
+  def user
+    @client.user
+  end
+
+  def get_user(username)
+    @client.user username
+  end
+
 end
